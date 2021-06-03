@@ -3,17 +3,18 @@ package com.martialcoder.friendlychat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class aboutMe extends AppCompatActivity {
 
      CardView about_me;
-     LinearLayout   ll_rate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class aboutMe extends AppCompatActivity {
         rating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppRater.app_launched(aboutMe.this);
+                launchMarket();
 
             }
         });
@@ -41,5 +42,14 @@ public class aboutMe extends AppCompatActivity {
     }
     public void onBackPressed() {
         finish();
+    }
+    private void launchMarket() {
+        Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.martialcoder.friendlychat" );
+        Intent myAppLinkToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+            startActivity(myAppLinkToMarket);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, " unable to find market app", Toast.LENGTH_LONG).show();
+        }
     }
 }
