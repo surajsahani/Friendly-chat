@@ -314,6 +314,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, SignInActivity.class));
                 finish();
                 return true;
+            case R.id.about_menu:
+//                startActivity(new Intent(this, aboutMe.class));
+                Intent first = new Intent(MainActivity.this,aboutMe.class);
+                startActivity(first);
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
