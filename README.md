@@ -1,5 +1,8 @@
 # Friendly-chat
 
+FriendlyChat is a Firebase platform chat app on Android. A basic chat application with the use of Firebase and its tools.in real-time across platforms.
+Allow users to sign in. Sync data using the Firebase Realtime Database and to Store binary files in Firebase
+
 <p align="left">
 <a href="https://play.google.com/store/apps/details?id=com.martialcoder.friendlychat">
     <img alt="Get it on Google Play"
