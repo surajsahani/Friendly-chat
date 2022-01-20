@@ -27,6 +27,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
@@ -50,6 +51,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class MainActivity extends AppCompatActivity {
 
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
+
         TextView messageTextView;
         ImageView messageImageView;
         TextView messengerTextView;
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mSendButton;
     private RecyclerView mMessageRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
-    private ProgressBar mProgressBar;
+    //private ProgressBar mProgressBar;
     private EditText mMessageEditText;
     private ImageView mAddMessageImageView;
 
@@ -92,11 +94,16 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder>
             mFirebaseAdapter;
 
+    ShimmerFrameLayout mShimmerViewContainer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
+
+                mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         // Set default username is anonymous.
         mUsername = ANONYMOUS;
 
@@ -122,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         mSignInClient = GoogleSignIn.getClient(this, gso);
 
         // Initialize ProgressBar and RecyclerView.
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        //mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mMessageRecyclerView = (RecyclerView) findViewById(R.id.messageRecyclerView);
         mLinearLayoutManager = new LinearLayoutManager(this);
         mLinearLayoutManager.setStackFromEnd(true);
@@ -156,7 +163,9 @@ public class MainActivity extends AppCompatActivity {
             protected void onBindViewHolder(final MessageViewHolder viewHolder,
                                             int position,
                                             FriendlyMessage friendlyMessage) {
-                mProgressBar.setVisibility(ProgressBar.INVISIBLE);
+                //mProgressBar.setVisibility(ProgressBar.INVISIBLE);
+
+                mShimmerViewContainer.setVisibility(View.GONE);
                 if (friendlyMessage.getText() != null) {
                     viewHolder.messageTextView.setText(friendlyMessage.getText());
                     viewHolder.messageTextView.setVisibility(TextView.VISIBLE);
