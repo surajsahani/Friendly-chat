@@ -23,9 +23,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             messengerImageView = (CircleImageView) itemView.findViewById(R.id.messengerImageView);
         }
     }
-
+    private ShimmerFrameLayout mShimmerViewContainer;
     private static final String TAG = "MainActivity";
     public static final String MESSAGES_CHILD = "messages";
     private static final int REQUEST_INVITE = 1;
@@ -94,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder>
             mFirebaseAdapter;
 
-    ShimmerFrameLayout mShimmerViewContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
