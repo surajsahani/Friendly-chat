@@ -48,6 +48,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ShimmerFrameLayout mShimmerViewContainer;
+
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
 
         TextView messageTextView;
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             messengerImageView = (CircleImageView) itemView.findViewById(R.id.messengerImageView);
         }
     }
-    private ShimmerFrameLayout mShimmerViewContainer;
+
     private static final String TAG = "MainActivity";
     public static final String MESSAGES_CHILD = "messages";
     private static final int REQUEST_INVITE = 1;
