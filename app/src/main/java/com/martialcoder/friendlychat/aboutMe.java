@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class aboutMe extends AppCompatActivity {
@@ -20,6 +21,8 @@ public class aboutMe extends AppCompatActivity {
 
 
         about_me = findViewById(R.id.about_me);
+        TextView versionCode = findViewById(R.id.versionCode);
+        versionCode.setText(getAppVersion());
         CardView rating = findViewById(R.id.rating);
         rating.setOnClickListener(v -> launchMarket());
         about_me.setOnClickListener(v -> {
@@ -42,11 +45,15 @@ public class aboutMe extends AppCompatActivity {
         }
     }
 
-    Context context = getApplicationContext(); // or activity.getApplicationContext()
-    PackageManager packageManager = context.getPackageManager();
-    String packageName = context.getPackageName();
-
-    String myVersionName = "not available"; // initialize String
-
+    public String getAppVersion() {
+        String versionCode = "1.0";
+        try {
+            versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return versionCode;
+    }
 
 }

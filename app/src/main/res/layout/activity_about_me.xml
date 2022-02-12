@@ -73,6 +73,7 @@
                 android:src="@drawable/ic_baseline_refresh_24"
                />
             <TextView
+                android:id="@+id/versionCode"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
