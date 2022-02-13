@@ -5,8 +5,10 @@
     android:layout_marginTop="20dp"
     android:layout_marginLeft="10dp">
 
+
     <View
         android:id="@+id/thumbnail"
+
         android:layout_width="@dimen/placeholderImage"
         android:layout_height="@dimen/placeholderImage"
         android:layout_marginTop="@dimen/padding_10"

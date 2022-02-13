@@ -7,11 +7,11 @@
         <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/activity_about_me.xml" value="0.14947916666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.11639492753623189" />
         <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.21" />
         <entry key="app/src/main/res/layout/bottom_sheet_layoutxml.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/data_placeholder_layout.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/data_placeholder_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.14" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_message.xml" value="0.18" />
