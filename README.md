@@ -18,5 +18,7 @@ Allow users to sign in. Sync data using the Firebase Realtime Database and to St
 # Built With 🛠︎
     
     Java - First class and official programming language for Android development.
+    
     Firebase - cloud-hosted database in which data is stored as JSON, Authentication
+    
     Material Components for Android - Modular and customizable Material Design UI components for Android.
