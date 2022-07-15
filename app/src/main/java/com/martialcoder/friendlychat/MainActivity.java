@@ -90,8 +90,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mFirebaseDatabaseReference;
-    private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder>
-            mFirebaseAdapter;
+    private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder> mFirebaseAdapter;
 
     private Context mContext;
 
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         mContext = this;
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
-
+        mShimmerViewContainer.startShimmerAnimation();
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         // Set default username is anonymous.
         mUsername = ANONYMOUS;
@@ -163,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                                             FriendlyMessage friendlyMessage) {
                 //mProgressBar.setVisibility(ProgressBar.INVISIBLE);
 
-                mShimmerViewContainer.setVisibility(View.GONE);
+
                 if (friendlyMessage.getText() != null) {
                     viewHolder.messageTextView.setText(friendlyMessage.getText());
                     viewHolder.messageTextView.setVisibility(TextView.VISIBLE);
@@ -190,8 +189,11 @@ public class MainActivity extends AppCompatActivity {
                                 .load(friendlyMessage.getImageUrl())
                                 .into(viewHolder.messageImageView);
                     }
+
                     viewHolder.messageImageView.setVisibility(ImageView.VISIBLE);
                     viewHolder.messageTextView.setVisibility(TextView.GONE);
+                    mShimmerViewContainer.stopShimmerAnimation();
+                    mShimmerViewContainer.setVisibility(View.GONE);
                 }
 
 

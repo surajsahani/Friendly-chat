@@ -71,5 +71,19 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
     implementation 'com.google.android.material:material:1.6.0-alpha02'
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+
+    def htextview_version = "0.1.6"
+
+    // as 3.0 use implementation
+    compile "com.hanks:htextview-base:$htextview_version"        // base library
+
+    compile "com.hanks:htextview-fade:$htextview_version"        // optional
+    compile "com.hanks:htextview-line:$htextview_version"        // optional
+    compile "com.hanks:htextview-rainbow:$htextview_version"     // optional
+    compile "com.hanks:htextview-typer:$htextview_version"       // optional
+
+    compile "com.hanks:htextview-scale:$htextview_version"       // optional
+    compile "com.hanks:htextview-evaporate:$htextview_version"   // optional
+    compile "com.hanks:htextview-fall:$htextview_version"        // optional
 }
 apply plugin: 'com.google.gms.google-services'
