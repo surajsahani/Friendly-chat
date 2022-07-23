@@ -15,23 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "1082880924462-cjplmn2takds0tvs7pff4qnqr04f6898.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.martialcoder.friendlychat",
-            "certificate_hash": "2eb9deee8c3382f76a7776c775b0bbc0da2321f9"
-          }
-        },
-        {
-          "client_id": "1082880924462-d96965s2bpsqcf48roltmgsrg8105gqi.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.martialcoder.friendlychat",
-            "certificate_hash": "b1b94de373320372f041f9755f14dd4589f0c9e9"
-          }
-        },
-        {
-          "client_id": "1082880924462-j2njfv74f4ts5r62pfl49qc9aumc0sfc.apps.googleusercontent.com",
+          "client_id": "1082880924462-6rj28h605loojdeuunmts4qoii6t82di.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.martialcoder.friendlychat",
@@ -39,19 +23,19 @@
           }
         },
         {
-          "client_id": "1082880924462-r2uq2r72eqv9048lecegqald8or9lgdk.apps.googleusercontent.com",
+          "client_id": "1082880924462-aral9p9orb2lpfbpe7gu6j1c4mhqk6d4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.martialcoder.friendlychat",
-            "certificate_hash": "413f97497092e755a1cd54f0bd78c197f425e9bc"
+            "certificate_hash": "a8f31aab43abead3a9874e169736a09f9523da08"
           }
         },
         {
-          "client_id": "1082880924462-uhn2kh97e2ui5dpvvlbe6sr24btgipsd.apps.googleusercontent.com",
+          "client_id": "1082880924462-t8ujg6treqvbium5571c6fq3r6pish9q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.martialcoder.friendlychat",
-            "certificate_hash": "ce8ba2bece5b89151060f7b785afbae7bc836398"
+            "certificate_hash": "2eb9deee8c3382f76a7776c775b0bbc0da2321f9"
           }
         },
         {

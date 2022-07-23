@@ -40,6 +40,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.suddenh4x.ratingdialog.AppRating;
+import com.suddenh4x.ratingdialog.preferences.RatingThreshold;
+import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Objects;
 
@@ -47,57 +50,45 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ShimmerFrameLayout mShimmerViewContainer;
-
-    public static class MessageViewHolder extends RecyclerView.ViewHolder {
-
-        TextView messageTextView;
-        ImageView messageImageView;
-        TextView messengerTextView;
-        CircleImageView messengerImageView;
-
-        public MessageViewHolder(View v) {
-            super(v);
-            messageTextView = itemView.findViewById(R.id.messageTextView);
-            messageImageView = itemView.findViewById(R.id.messageImageView);
-            messengerTextView = itemView.findViewById(R.id.messengerTextView);
-            messengerImageView = itemView.findViewById(R.id.messengerImageView);
-        }
-    }
-
-    private static final String TAG = "MainActivity";
     public static final String MESSAGES_CHILD = "messages";
+    public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
+    public static final String ANONYMOUS = "anonymous";
+    private static final String TAG = "MainActivity";
     private static final int REQUEST_INVITE = 1;
     private static final int REQUEST_IMAGE = 2;
     private static final String LOADING_IMAGE_URL = "https://www.google.com/images/spin-32.gif";
-    public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
-    public static final String ANONYMOUS = "anonymous";
     private static final String MESSAGE_SENT_EVENT = "message_sent";
+    private static final String MESSAGE_URL = "http://friendlychat.firebase.google.com/message/";
+    private ShimmerFrameLayout mShimmerViewContainer;
     private String mUsername;
     private String mPhotoUrl;
     private SharedPreferences mSharedPreferences;
     private GoogleSignInClient mSignInClient;
-    private static final String MESSAGE_URL = "http://friendlychat.firebase.google.com/message/";
-
     private Button mSendButton;
     private RecyclerView mMessageRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
     //private ProgressBar mProgressBar;
     private EditText mMessageEditText;
     private ImageView mAddMessageImageView;
-
     // Firebase instance variables
     private FirebaseAuth mAuth;
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mFirebaseDatabaseReference;
     private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder> mFirebaseAdapter;
-
     private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        new AppRating.Builder(this)
+                .setMinimumLaunchTimes(5)
+                .setMinimumDays(7)
+                .setMinimumLaunchTimesToShowAgain(5)
+                .setMinimumDaysToShowAgain(10)
+                .setRatingThreshold(RatingThreshold.FOUR)
+                .showIfMeetsConditions();
 
         mContext = this;
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
@@ -213,8 +204,8 @@ public class MainActivity extends AppCompatActivity {
                     args.putString("key", friendlyMessage.getName());
                     args.putString("url", friendlyMessage.getPhotoUrl());
                     BottomSheetDialog bottomSheet = new BottomSheetDialog();
-                    bottomSheet .setArguments(args);
-                    bottomSheet .show(((FragmentActivity) mContext).getSupportFragmentManager(),bottomSheet.getTag());
+                    bottomSheet.setArguments(args);
+                    bottomSheet.show(((FragmentActivity) mContext).getSupportFragmentManager(), bottomSheet.getTag());
 
 //                    BottomSheetDialog bottomSheet = new BottomSheetDialog();
 //                    bottomSheet.show(((FragmentActivity) view.getContext()).getSupportFragmentManager(), bottomSheet.getTag());
@@ -335,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.about_menu:
 //                startActivity(new Intent(this, aboutMe.class));
-                Intent first = new Intent(MainActivity.this, aboutMe.class);
+                Intent first = new Intent(MainActivity.this, AboutApp.class);
                 startActivity(first);
 //                return true;
             default:
@@ -398,6 +389,22 @@ public class MainActivity extends AppCompatActivity {
                                 task.getException());
                     }
                 });
+    }
+
+    public static class MessageViewHolder extends RecyclerView.ViewHolder {
+
+        TextView messageTextView;
+        ImageView messageImageView;
+        TextView messengerTextView;
+        CircleImageView messengerImageView;
+
+        public MessageViewHolder(View v) {
+            super(v);
+            messageTextView = itemView.findViewById(R.id.messageTextView);
+            messageImageView = itemView.findViewById(R.id.messageImageView);
+            messengerTextView = itemView.findViewById(R.id.messengerTextView);
+            messengerImageView = itemView.findViewById(R.id.messengerImageView);
+        }
     }
 
 }

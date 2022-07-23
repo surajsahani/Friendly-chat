@@ -85,5 +85,9 @@ dependencies {
     compile "com.hanks:htextview-scale:$htextview_version"       // optional
     compile "com.hanks:htextview-evaporate:$htextview_version"   // optional
     compile "com.hanks:htextview-fall:$htextview_version"        // optional
+
+    compile 'com.yarolegovich:sliding-root-nav:1.1.1'
+    //Rating
+    implementation 'com.suddenh4x.ratingdialog:awesome-app-rating:2.4.0'
 }
 apply plugin: 'com.google.gms.google-services'

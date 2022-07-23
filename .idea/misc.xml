@@ -4,14 +4,38 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/drawable/arrow_forward.xml" value="0.2015" />
+        <entry key="app/src/main/res/drawable/buy_with_googlepay_button_content.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/circularImage.xml" value="0.1225" />
+        <entry key="app/src/main/res/drawable/googlepay_button_overlay.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1225" />
+        <entry key="app/src/main/res/drawable/ic_baseline_block_24.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.2015" />
+        <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.168" />
+        <entry key="app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/ic_baseline_report_24.xml" value="0.2015" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.168" />
+        <entry key="app/src/main/res/drawable/mybutton.xml" value="0.168" />
+        <entry key="app/src/main/res/drawable/qr_code.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/activity_about_app.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_about_me.xml" value="0.14947916666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_ads.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_personal_chat.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_qrcode.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.11639492753623189" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_upgrade.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_user_details.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.22" />
         <entry key="app/src/main/res/layout/bottom_sheet_layoutxml.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_about.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/data_placeholder_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/data_placeholder_layoutTwo.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/data_placeholder_layout_five.xml" value="0.19375" />
@@ -20,9 +44,23 @@
         <entry key="app/src/main/res/layout/data_placeholder_layout_six.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/data_placeholder_layout_three.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/data_placeholder_layout_two.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_d.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_dialog.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_report_dialog.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/item_message.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_text.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_user_details.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/item_message.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_option.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/menu_left_drawer.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/option.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/option_dialog.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/page2.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/report_items.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.33" />
       </map>
     </option>
   </component>
