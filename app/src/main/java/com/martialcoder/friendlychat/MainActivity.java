@@ -200,15 +200,18 @@ public class MainActivity extends AppCompatActivity {
 
                 viewHolder.messengerImageView.setOnClickListener(view -> {
 
-                    Bundle args = new Bundle();
-                    args.putString("key", friendlyMessage.getName());
-                    args.putString("url", friendlyMessage.getPhotoUrl());
-                    BottomSheetDialog bottomSheet = new BottomSheetDialog();
-                    bottomSheet.setArguments(args);
-                    bottomSheet.show(((FragmentActivity) mContext).getSupportFragmentManager(), bottomSheet.getTag());
-
+//                    Bundle args = new Bundle();
+//                    args.putString("key", friendlyMessage.getName());
+//                    args.putString("url", friendlyMessage.getPhotoUrl());
 //                    BottomSheetDialog bottomSheet = new BottomSheetDialog();
-//                    bottomSheet.show(((FragmentActivity) view.getContext()).getSupportFragmentManager(), bottomSheet.getTag());
+//                    bottomSheet.setArguments(args);
+//                    bottomSheet.show(((FragmentActivity) mContext).getSupportFragmentManager(), bottomSheet.getTag());
+//
+                    Intent intent = new Intent(MainActivity.this, UserDetails.class);
+                    intent.putExtra("name",friendlyMessage.getName());
+
+                    intent.putExtra("url", friendlyMessage.getPhotoUrl());
+                    startActivity(intent);
                 });
             }
         };

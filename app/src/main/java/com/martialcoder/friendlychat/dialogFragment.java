@@ -32,6 +32,7 @@ public class dialogFragment extends DialogFragment {
     private RadioButton radioButton4;
     private RadioGroup radioGroup;
     private EditText et_callback;
+
     public dialogFragment(OptionListener options) {
         this.options = options;
     }
@@ -75,6 +76,7 @@ public class dialogFragment extends DialogFragment {
             intent.putExtra(Intent.EXTRA_TEXT, et_callback.getText());
             startActivity(intent);
             dismiss();
+
         });
 
         btn_cancel_dialog_fragment.setOnClickListener(new View.OnClickListener() {

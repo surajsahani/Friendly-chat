@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -30,33 +30,18 @@
         app:layout_constraintTop_toBottomOf="@id/IvUserProfile" />
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/tvSentMessage"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Sent message"-->
-<!--        android:textSize="15sp"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/tvSentMessage"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/tvName"-->
-<!--        app:layout_constraintVertical_chainStyle="packed" />-->
-
-
     <Button
         android:id="@+id/tvChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginTop="524dp"
         android:text="Chat"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/chatbutton"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvName" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <Button
@@ -64,12 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginTop="524dp"
-        android:background="@drawable/mybutton"
-        android:text="Report this user"
+        android:background="@drawable/reportbutton"
+        android:text="Report"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvChat" />
 </androidx.constraintlayout.widget.ConstraintLayout>

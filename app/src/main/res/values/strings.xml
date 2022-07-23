@@ -16,4 +16,11 @@
     <string name="title_activity_about">about</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="report">Report</string>
+    <string name="cancel">Cancel</string>
+    <string name="spam">Spam</string>
+    <string name="pornography">Pornography</string>
+    <string name="abuse">Abuse</string>
+    <string name="illegal_drug">Illegal Drug</string>
+    <string name="other">Other</string>
 </resources>

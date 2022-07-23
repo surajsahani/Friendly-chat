@@ -6,6 +6,7 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/drawable/arrow_forward.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/buy_with_googlepay_button_content.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/chatbutton.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/circularImage.xml" value="0.1225" />
         <entry key="app/src/main/res/drawable/googlepay_button_overlay.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.209375" />
@@ -45,7 +46,7 @@
         <entry key="app/src/main/res/layout/data_placeholder_layout_three.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/data_placeholder_layout_two.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_d.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/fragment_dialog.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_dialog.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.14" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_report_dialog.xml" value="0.19375" />

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class UserDetails extends AppCompatActivity implements OptionListener {
 
-    private TextView name;
+    private TextView tvName;
     private TextView vc;
     private ImageView url;
     private Button report;
@@ -42,7 +42,7 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
     }
 
     private void initialize() {
-        name = findViewById(R.id.tvName);
+        tvName = findViewById(R.id.tv_name);
         url = findViewById(R.id.IvUserProfile);
 
         report = findViewById(R.id.tvReport);
@@ -51,7 +51,7 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
         String str = intent.getStringExtra("name");
         String imagePath = intent.getStringExtra("url");
 
-        name.setText(str);
+        tvName.setText(str);
 
         Glide.with(getApplicationContext())
                 .load(imagePath)
@@ -62,13 +62,8 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
         report.setOnClickListener(v -> {
 
             FragmentTransaction Ft = getSupportFragmentManager().beginTransaction();
-
-//            Dialog newDialog = new Dialog();
             dialogFragment dialog = new dialogFragment(UserDetails.this);
-
-
             dialog.show(Ft, "dialog");
-
         });
     }
 
@@ -80,7 +75,7 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
 
     @Override
     public void cancelOption() {
-        Toast.makeText(this,"The operation canceled !!!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "The operation canceled !!!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
