@@ -10,8 +10,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".EditProfilePage"
+            android:exported="false" />
         <activity android:name=".AboutApp" />
-        <activity android:name=".UserDetails"/>
+        <activity android:name=".UserDetails" />
+        <activity
+            android:name=".UserProfile"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

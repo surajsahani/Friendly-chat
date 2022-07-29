@@ -2,11 +2,10 @@ package com.martialcoder.friendlychat;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,6 +24,7 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
 
     private Button tvChat;
 
+    public String imagePath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +34,6 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
         OnClick();
         tvChat = findViewById(R.id.tvChat);
 
-        tvChat.setOnClickListener(view -> {
-            Intent intent = new Intent(UserDetails.this, ChatActivity.class);
-            startActivity(intent);
-
-        });
     }
 
     private void initialize() {
@@ -49,13 +44,15 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
 
         Intent intent = getIntent();
         String str = intent.getStringExtra("name");
-        String imagePath = intent.getStringExtra("url");
+        imagePath = intent.getStringExtra("url");
 
         tvName.setText(str);
 
         Glide.with(getApplicationContext())
                 .load(imagePath)
                 .into(url);
+
+
     }
 
     private void OnClick() {
@@ -64,6 +61,12 @@ public class UserDetails extends AppCompatActivity implements OptionListener {
             FragmentTransaction Ft = getSupportFragmentManager().beginTransaction();
             dialogFragment dialog = new dialogFragment(UserDetails.this);
             dialog.show(Ft, "dialog");
+        });
+
+        url.setOnClickListener(view -> {
+            Intent intent = new Intent(UserDetails.this, SingleClick.class);
+            intent.putExtra("url", imagePath);
+            startActivity(intent);
         });
     }
 

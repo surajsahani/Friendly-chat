@@ -12,7 +12,7 @@ android {
     defaultConfig {
         multiDexEnabled true
         applicationId "com.martialcoder.friendlychat"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 32
         versionCode 7
         versionName "0.7"
@@ -89,5 +89,18 @@ dependencies {
     compile 'com.yarolegovich:sliding-root-nav:1.1.1'
     //Rating
     implementation 'com.suddenh4x.ratingdialog:awesome-app-rating:2.4.0'
+
+    //Zoomable
+    implementation 'io.github.aghajari:ZoomHelper:1.1.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+
 }
 apply plugin: 'com.google.gms.google-services'

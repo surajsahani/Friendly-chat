@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".UserDetails">
 
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/IvUserProfile"
         android:layout_width="100dp"
@@ -35,15 +34,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:background="@drawable/chatbutton"
         android:text="Chat"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:background="@drawable/chatbutton"
-        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
     <Button
         android:id="@+id/tvReport"
         android:layout_width="match_parent"
@@ -53,7 +50,8 @@
         android:text="Report"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvChat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,6 @@ package com.martialcoder.friendlychat;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,7 +41,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.suddenh4x.ratingdialog.AppRating;
 import com.suddenh4x.ratingdialog.preferences.RatingThreshold;
-import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Objects;
 
@@ -53,16 +51,22 @@ public class MainActivity extends AppCompatActivity {
     public static final String MESSAGES_CHILD = "messages";
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
     public static final String ANONYMOUS = "anonymous";
+    //Shared preferences
+    public static final String SHARED_PREFS = "sharedPrefs";
+    private SharedPreferences mSharedPreferences;
+    public static final String TEXT = "";
+    public static final String KEY = "myKey";
+    //Tags
     private static final String TAG = "MainActivity";
     private static final int REQUEST_INVITE = 1;
     private static final int REQUEST_IMAGE = 2;
     private static final String LOADING_IMAGE_URL = "https://www.google.com/images/spin-32.gif";
     private static final String MESSAGE_SENT_EVENT = "message_sent";
     private static final String MESSAGE_URL = "http://friendlychat.firebase.google.com/message/";
+    //Shimmer
     private ShimmerFrameLayout mShimmerViewContainer;
     private String mUsername;
     private String mPhotoUrl;
-    private SharedPreferences mSharedPreferences;
     private GoogleSignInClient mSignInClient;
     private Button mSendButton;
     private RecyclerView mMessageRecyclerView;
@@ -75,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mFirebaseDatabaseReference;
     private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder> mFirebaseAdapter;
+    //App Context
     private Context mContext;
 
     @Override
@@ -82,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //App Rating
         new AppRating.Builder(this)
                 .setMinimumLaunchTimes(5)
                 .setMinimumDays(7)
@@ -153,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
                                             FriendlyMessage friendlyMessage) {
                 //mProgressBar.setVisibility(ProgressBar.INVISIBLE);
 
-
                 if (friendlyMessage.getText() != null) {
                     viewHolder.messageTextView.setText(friendlyMessage.getText());
                     viewHolder.messageTextView.setVisibility(TextView.VISIBLE);
@@ -200,16 +205,15 @@ public class MainActivity extends AppCompatActivity {
 
                 viewHolder.messengerImageView.setOnClickListener(view -> {
 
-//                    Bundle args = new Bundle();
-//                    args.putString("key", friendlyMessage.getName());
-//                    args.putString("url", friendlyMessage.getPhotoUrl());
-//                    BottomSheetDialog bottomSheet = new BottomSheetDialog();
-//                    bottomSheet.setArguments(args);
-//                    bottomSheet.show(((FragmentActivity) mContext).getSupportFragmentManager(), bottomSheet.getTag());
-//
-                    Intent intent = new Intent(MainActivity.this, UserDetails.class);
-                    intent.putExtra("name",friendlyMessage.getName());
 
+                    SharedPreferences prefs;
+                    prefs = PreferenceManager.getDefaultSharedPreferences(getApplication());
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("name", friendlyMessage.getName());
+                    editor.apply();
+
+                    Intent intent = new Intent(MainActivity.this, UserDetails.class);
+                    intent.putExtra("name", friendlyMessage.getName());
                     intent.putExtra("url", friendlyMessage.getPhotoUrl());
                     startActivity(intent);
                 });
@@ -282,8 +286,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         );
-    }
 
+    }
     @Override
     public void onStart() {
         super.onStart();
@@ -328,10 +332,13 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.about_menu:
-//                startActivity(new Intent(this, aboutMe.class));
                 Intent first = new Intent(MainActivity.this, AboutApp.class);
                 startActivity(first);
-//                return true;
+                return true;
+            case R.id.about_user:
+                Intent third = new Intent(this, UserProfile.class);
+                startActivity(third);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

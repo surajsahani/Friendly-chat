@@ -9,4 +9,8 @@
         android:id="@+id/about_menu"
         android:title="@string/about"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/about_user"
+        android:title="@string/Profile"
+        app:showAsAction="never"/>
 </menu>

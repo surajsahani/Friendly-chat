@@ -26,10 +26,12 @@
         <entry key="app/src/main/res/layout/activity_ads.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_edit_profile_page.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_personal_chat.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_qrcode.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.11639492753623189" />
+        <entry key="app/src/main/res/layout/activity_single_click.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_upgrade.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_details.xml" value="0.22" />
